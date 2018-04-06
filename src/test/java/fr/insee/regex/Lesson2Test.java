@@ -16,6 +16,12 @@ public class Lesson2Test {
 	
 	private static final Pattern pattern = Pattern.compile(regex);
 	
+	/*
+	 - contains 	abc123xyz
+	 - contains 	define "123"
+	 - skip			var g = 'aze';
+	*/
+	
 	@Test
 	public void regexShouldMatch_abc123xyz() {
 		assertThat("abc123xyz").containsPattern(pattern);

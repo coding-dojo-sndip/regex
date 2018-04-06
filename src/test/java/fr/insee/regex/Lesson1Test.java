@@ -16,6 +16,12 @@ public class Lesson1Test {
 	
 	private static final Pattern pattern = Pattern.compile(regex);
 	
+	/*
+	 - match 	abcde
+	 - skip 	abcdefg
+	 - skip 	abc
+	*/
+	
 	@Test
 	public void regexShouldMatch_abcde() {
 		assertThat("abcde").matches(pattern);

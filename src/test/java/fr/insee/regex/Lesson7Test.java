@@ -16,6 +16,12 @@ public class Lesson7Test {
 	
 	private static final Pattern pattern = Pattern.compile(regex);
 	
+	/*
+	 - match 	wazzzzzup
+	 - match 	wazzzup
+	 - skip 	wazup
+	*/
+	
 	@Test
 	public void regexShouldMatch_wazzzzzup() {
 		assertThat("wazzzzzup").matches(pattern);

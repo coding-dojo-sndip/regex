@@ -16,6 +16,15 @@ public class Lesson4Test {
 	
 	private static final Pattern pattern = Pattern.compile(regex);
 	
+	/*
+	 - match 	can
+	 - match 	man
+	 - match 	fan
+	 - skip 	dan
+	 - skip 	ran
+	 - skip 	pan
+	*/
+	
 	@Test
 	public void regexShouldMatch_can() {
 		assertThat("can").matches(pattern);

@@ -16,6 +16,15 @@ public class Lesson6Test {
 	
 	private static final Pattern pattern = Pattern.compile(regex);
 	
+	/*
+	 - match 	Ana
+	 - match 	Bob
+	 - match 	Cpc
+	 - skip 	aax
+	 - skip 	bby
+	 - skip 	ccz
+	*/
+	
 	@Test
 	public void regexShouldMatch_Ana() {
 		assertThat("Ana").matches(pattern);

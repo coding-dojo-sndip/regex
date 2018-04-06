@@ -16,6 +16,13 @@ public class Lesson3Test {
 	
 	private static final Pattern pattern = Pattern.compile(regex);
 	
+	/*
+	 - match 	cat.
+	 - match 	896.
+	 - match 	?=+.
+	 - skip 	abc1
+	*/
+	
 	@Test
 	public void regexShouldMatch_cat() {
 		assertThat("cat.").matches(pattern);
