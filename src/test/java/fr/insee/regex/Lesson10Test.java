@@ -12,7 +12,7 @@ import org.junit.Test;
  * */
 public class Lesson10Test {
 
-	private static final String regex = "^Mission: successful"; // TODO
+	private static final String regex = ""; // TODO
 	
 	private static final Pattern pattern = Pattern.compile(regex);
 	
