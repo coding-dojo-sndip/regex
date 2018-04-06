@@ -10,7 +10,7 @@ import org.junit.Test;
 /**
  * The Dot
  * */
-public class Lesson3Test {
+public class Lesson02Test {
 
 	private static final String regex = ""; // TODO
 	

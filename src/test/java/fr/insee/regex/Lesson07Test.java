@@ -10,7 +10,7 @@ import org.junit.Test;
 /**
  * Kleene Star (*) and the Kleene Plus (+)
  * */
-public class Lesson8Test {
+public class Lesson07Test {
 
 	private static final String regex = ""; // TODO
 	

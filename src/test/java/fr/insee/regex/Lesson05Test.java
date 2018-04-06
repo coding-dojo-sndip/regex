@@ -10,7 +10,7 @@ import org.junit.Test;
 /**
  * Character ranges 
  * */
-public class Lesson6Test {
+public class Lesson05Test {
 
 	private static final String regex = ""; // TODO
 	

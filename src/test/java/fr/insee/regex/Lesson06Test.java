@@ -10,7 +10,7 @@ import org.junit.Test;
 /**
  * Catching some zzz's 
  * */
-public class Lesson7Test {
+public class Lesson06Test {
 
 	private static final String regex = ""; // TODO
 	

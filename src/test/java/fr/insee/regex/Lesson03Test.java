@@ -10,7 +10,7 @@ import org.junit.Test;
 /**
  * Matching specific characters 
  * */
-public class Lesson4Test {
+public class Lesson03Test {
 
 	private static final String regex = ""; // TODO
 	
