@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 import org.junit.Test;
 
 /**
- * Starting and ending  
+ * Starting and ending
  * */
 public class Lesson10Test {
 
