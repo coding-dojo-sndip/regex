@@ -8,26 +8,26 @@ import java.util.regex.Pattern;
 import org.junit.Test;
 
 /**
- * An Introduction, and the ABCs
+ * The 123s
  * */
-public class Lesson1Test {
+public class Lesson2Test {
 
 	private static final String regex = ""; // TODO
 	
 	private static final Pattern pattern = Pattern.compile(regex);
 	
 	@Test
-	public void regexShouldMatch_abcde() {
-		assertThat("abcde").matches(pattern);
+	public void regexShouldMatch_abc123xyz() {
+		assertThat("abc123xyz").containsPattern(pattern);
 	}
 	
 	@Test
-	public void regexShouldNotMatch_abcdefg() {
-		assertThat("abcdefg").doesNotMatch(pattern);
+	public void regexShouldMatch_define_123() {
+		assertThat("define \"123\"").containsPattern(pattern);
 	}
 	
 	@Test
 	public void regexShouldNotMatch_abc() {
-		assertThat("abc").doesNotMatch(pattern);
+		assertThat("var g = 'aze';").doesNotContainPattern(pattern);
 	}
 }
