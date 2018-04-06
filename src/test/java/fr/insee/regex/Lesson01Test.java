@@ -23,17 +23,17 @@ public class Lesson01Test {
 	*/
 	
 	@Test
-	public void regexShouldMatch_abc123xyz() {
+	public void regexShouldMatch_1() {
 		assertThat("abc123xyz").containsPattern(pattern);
 	}
 	
 	@Test
-	public void regexShouldMatch_define_123() {
+	public void regexShouldMatch_2() {
 		assertThat("define \"123\"").containsPattern(pattern);
 	}
 	
 	@Test
-	public void regexShouldNotMatch_abc() {
+	public void regexShouldSkip_1() {
 		assertThat("var g = 'aze';").doesNotContainPattern(pattern);
 	}
 }

@@ -24,22 +24,22 @@ public class Lesson02Test {
 	*/
 	
 	@Test
-	public void regexShouldMatch_cat() {
+	public void regexShouldMatch_1() {
 		assertThat("cat.").matches(pattern);
 	}
 	
 	@Test
-	public void regexShouldMatch_896() {
+	public void regexShouldMatch_2() {
 		assertThat("896.").matches(pattern);
 	}
 	
 	@Test
-	public void regexShouldMatch_signs() {
+	public void regexShouldMatch_3() {
 		assertThat("?=+.").matches(pattern);
 	}
 	
 	@Test
-	public void regexShouldNotMatch_abc1() {
+	public void regexShouldSkip_1() {
 		assertThat("abc1").doesNotMatch(pattern);
 	}
 }

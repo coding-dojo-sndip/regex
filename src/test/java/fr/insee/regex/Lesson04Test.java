@@ -23,17 +23,17 @@ public class Lesson04Test {
 	*/
 	
 	@Test
-	public void regexShouldMatch_hog() {
+	public void regexShouldMatch_1() {
 		assertThat("hog").matches(pattern);
 	}
 	
 	@Test
-	public void regexShouldMatch_dog() {
+	public void regexShouldMatch_2() {
 		assertThat("dog").matches(pattern);
 	}
 	
 	@Test
-	public void regexShouldNotMatch_bog() {
+	public void regexShouldSkip_1() {
 		assertThat("bog").doesNotMatch(pattern);
 	}
 }

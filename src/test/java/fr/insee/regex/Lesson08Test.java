@@ -24,22 +24,22 @@ public class Lesson08Test {
 	*/
 	
 	@Test
-	public void regexShouldMatch_aaaabcc() {
+	public void regexShouldMatch_1() {
 		assertThat("1 file found?").matches(pattern);
 	}
 	
 	@Test
-	public void regexShouldMatch_aabbbbc() {
+	public void regexShouldMatch_2() {
 		assertThat("2 files found?").matches(pattern);
 	}
 	
 	@Test
-	public void regexShouldMatch_aacc() {
+	public void regexShouldMatch_3() {
 		assertThat("24 files found?").matches(pattern);
 	}
 	
 	@Test
-	public void regexShouldNotMatch_a() {
+	public void regexShouldSkip_1() {
 		assertThat("No files found.").doesNotMatch(pattern);
 	}
 }

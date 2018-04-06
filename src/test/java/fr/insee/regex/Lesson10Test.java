@@ -23,17 +23,17 @@ public class Lesson10Test {
 	*/
 	
 	@Test
-	public void regexShouldMatch_Mission_successful() {
+	public void regexShouldMatch_1() {
 		assertThat("Mission: successful").containsPattern(pattern);
 	}
 	
 	@Test
-	public void regexShouldMatch_Last_Mission_unsuccessful() {
+	public void regexShouldSkip_1() {
 		assertThat("Last Mission: unsuccessful").doesNotContainPattern(pattern);
 	}
 	
 	@Test
-	public void regexShouldNotMatch_Next_Mission_successful_upon_capture_of_target() {
+	public void regexShouldSkip_2() {
 		assertThat("Next Mission: successful upon capture of target").doesNotContainPattern(pattern);
 	}
 }

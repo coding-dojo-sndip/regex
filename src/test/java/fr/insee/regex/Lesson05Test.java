@@ -26,32 +26,32 @@ public class Lesson05Test {
 	*/
 	
 	@Test
-	public void regexShouldMatch_Ana() {
+	public void regexShouldMatch_1() {
 		assertThat("Ana").matches(pattern);
 	}
 	
 	@Test
-	public void regexShouldMatch_Bob() {
+	public void regexShouldMatch_2() {
 		assertThat("Bob").matches(pattern);
 	}
 	
 	@Test
-	public void regexShouldMatch_Cpc() {
+	public void regexShouldMatch_3() {
 		assertThat("Cpc").matches(pattern);
 	}
 	
 	@Test
-	public void regexShouldNotMatch_aax() {
+	public void regexShouldSkip_1() {
 		assertThat("aax").doesNotMatch(pattern);
 	}
 	
 	@Test
-	public void regexShouldNotMatch_bby() {
+	public void regexShouldSkip_2() {
 		assertThat("bby").doesNotMatch(pattern);
 	}
 	
 	@Test
-	public void regexShouldNotMatch_ccz() {
+	public void regexShouldSkip_3() {
 		assertThat("ccz").doesNotMatch(pattern);
 	}
 }

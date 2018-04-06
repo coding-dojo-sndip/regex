@@ -23,17 +23,17 @@ public class Lesson00Test {
 	*/
 	
 	@Test
-	public void regexShouldMatch_abcde() {
+	public void regexShouldMatch_1() {
 		assertThat("abcde").matches(pattern);
 	}
 	
 	@Test
-	public void regexShouldNotMatch_abcdefg() {
+	public void regexShouldSkip_1() {
 		assertThat("abcdefg").doesNotMatch(pattern);
 	}
 	
 	@Test
-	public void regexShouldNotMatch_abc() {
+	public void regexShouldSkip_2() {
 		assertThat("abc").doesNotMatch(pattern);
 	}
 }

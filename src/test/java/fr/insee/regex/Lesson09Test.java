@@ -24,22 +24,22 @@ public class Lesson09Test {
 	*/
 	
 	@Test
-	public void regexShouldMatch_aaaabcc() {
+	public void regexShouldMatch_1() {
 		assertThat("1. abc").matches(pattern);
 	}
 	
 	@Test
-	public void regexShouldMatch_aabbbbc() {
+	public void regexShouldMatch_2() {
 		assertThat("2.	 abc").matches(pattern);
 	}
 	
 	@Test
-	public void regexShouldMatch_aacc() {
+	public void regexShouldMatch_3() {
 		assertThat("3. 		 abc").matches(pattern);
 	}
 	
 	@Test
-	public void regexShouldNotMatch_a() {
+	public void regexShouldSkip_1() {
 		assertThat("4.abc").doesNotMatch(pattern);
 	}
 }
