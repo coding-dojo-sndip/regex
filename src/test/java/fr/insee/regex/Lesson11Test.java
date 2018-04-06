@@ -29,7 +29,11 @@ public class Lesson11Test {
 		boolean matches = matcher.matches();
 		assertThat(matches).isTrue();
 		if(matches) {
-			assertThat(matcher.group(1)).isEqualTo("file_record_transcript");
+			int groupCount = matcher.groupCount();
+			assertThat(groupCount).isGreaterThanOrEqualTo(1);
+			if (groupCount >= 1) {
+				assertThat(matcher.group(1)).isEqualTo("file_record_transcript");
+			}
 		}
 	}
 	
@@ -40,7 +44,11 @@ public class Lesson11Test {
 		assertThat(matches).isTrue();
 		assertThat(matches);
 		if(matcher.matches()) {
-			assertThat(matcher.group(1)).isEqualTo("file_07241999");
+			int groupCount = matcher.groupCount();
+			assertThat(groupCount).isGreaterThanOrEqualTo(1);
+			if (groupCount >= 1) {
+				assertThat(matcher.group(1)).isEqualTo("file_07241999");
+			}
 		}
 	}
 	
