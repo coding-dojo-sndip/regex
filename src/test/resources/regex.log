@@ -1,0 +1,36 @@
+782 [INFO] Error stacktraces are turned on.
+832 [DEBUG] Scanning for projects...
+2264 [INFO] 
+2264 [WARN] --------------------------< fr.insee:ehcache >--------------------------
+2264 [INFO] Building ehcache 0.0.1-SNAPSHOT
+2264 [TRACE] --------------------------------[ jar ]---------------------------------
+7168 [INFO] 
+7168 [TRACE] --- maven-resources-plugin:3.0.1:resources (default-resources) @ ehcache ---
+8935 [INFO] Using 'UTF-8' encoding to copy filtered resources.
+8938 [INFO] Copying 1 resource
+8946 [DEBUG] Copying 1 resource
+8951 [INFO] 
+8951 [INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ ehcache ---
+19724 [INFO] Changes detected - recompiling the module!
+19727 [TRACE] Compiling 10 source files to /mnt/mesos/sandbox/builds/c404619f/0/wehdrc/ehcache/target/classes
+20430 [INFO] 
+20430 [INFO] --- maven-resources-plugin:3.0.1:testResources (default-testResources) @ ehcache ---
+20434 [DEBUG] Using 'UTF-8' encoding to copy filtered resources.
+20434 [INFO] skip non existing resourceDirectory /mnt/mesos/sandbox/builds/c404619f/0/wehdrc/ehcache/src/test/resources
+20434 [WARN] 
+20434 [INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ ehcache ---
+20436 [DEBUG] No sources to compile
+20436 [INFO] 
+20436 [INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ ehcache ---
+21439 [TRACE] No tests to run.
+21447 [WARN] 
+21447 [INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ ehcache ---
+21921 [DEBUG] Building jar: /mnt/mesos/sandbox/builds/c404619f/0/wehdrc/ehcache/target/ehcache-0.0.1-SNAPSHOT.jar
+21957 [INFO] 
+21957 [INFO] --- spring-boot-maven-plugin:2.0.2.RELEASE:repackage (default) @ ehcache ---
+50136 [TRACE] ------------------------------------------------------------------------
+50137 [INFO] BUILD SUCCESS
+50137 [DEBUG] ------------------------------------------------------------------------
+50137 [INFO] Total time: 49.324 s
+50137 [INFO] Finished at: 2018-06-01T06:29:27Z
+50138 [INFO] ------------------------------------------------------------------------

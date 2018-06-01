@@ -3,65 +3,57 @@ package fr.insee.regex;
 
 import static org.assertj.core.api.Assertions.*;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import org.junit.Test;
 
 /**
- * Non capturing groups
+ * Filtrer les lignes du fichier regex.log :
+ * - Conserver uniquement les lignes dont le message contient au moins un caractère alphanumérique
+ * - Capturer le nombre en début de ligne
  * */
 public class Lesson15Test {
 
-	private static final String regex = ""; // TODO
+	private static final String regex = "(\\d+) \\[(.*)\\] (.*\\w+.*)"; // TODO
 	
 	private static final Pattern pattern = Pattern.compile(regex);
 	
-	/*
-	 - capture 	ranked 1st 1
-	 - capture 	ranked 2nd 2
-	 - capture 	ranked 3rd 3
-	 - capture 	ranked 4th 4
-	 - capture 	ranked 5th 5
-	*/
-	
 	@Test
-	public void regexShouldMatch_1() {
-		shouldCapture("ranked 1st", 1);
+	public void filter_log_nb_lines() throws IOException {
+		List<String> lines = Files.readAllLines(Paths.get("src/test/resources/regex.log"))
+			.stream()
+			.filter(this::matches)
+			.collect(Collectors.toList());
+		assertThat(lines).hasSize(25);
 	}
 	
 	@Test
-	public void regexShouldMatch_2() {
-		shouldCapture("ranked 2nd", 1);
+	public void capture_first_number() throws IOException {
+		int sum = Files.readAllLines(Paths.get("src/test/resources/regex.log"))
+			.stream()
+			.filter(this::matches)
+			.mapToInt(this::mapToInt)
+			.sum();
+		assertThat(sum).isEqualTo(450_574);
 	}
 	
-	@Test
-	public void regexShouldMatch_3() {
-		shouldCapture("ranked 3rd", 1);
+	private boolean matches(String line) {
+		Matcher matcher = pattern.matcher(line);
+		return matcher.matches();
 	}
 	
-	@Test
-	public void regexShouldMatch_4() {
-		shouldCapture("ranked 4th", 1);
-	}
-	
-	@Test
-	public void regexShouldMatch_5() {
-		shouldCapture("ranked 5th", 1);
-	}
-
-	private void shouldCapture(String string, int capture) {
-		Matcher matcher = pattern.matcher(string);
-		boolean matches = matcher.matches();
-		assertThat(matches).isTrue();
-		assertThat(matches);
+	private int mapToInt(String line) {
+		Matcher matcher = pattern.matcher(line);
 		if(matcher.matches()) {
-			int groupCount = matcher.groupCount();
-			assertThat(groupCount).isEqualTo(1);
-			if (groupCount == 1) {
-				assertThat(matcher.group(1)).isEqualTo(String.valueOf(capture));
-			}
+			return Integer.valueOf(matcher.group(1));
 		}
+		return 0;
 	}
 }
 
