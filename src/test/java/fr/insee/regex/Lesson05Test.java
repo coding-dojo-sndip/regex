@@ -8,7 +8,11 @@ import java.util.regex.Pattern;
 import org.junit.Test;
 
 /**
- * Character ranges 
+ * Character ranges
+ *  [a-z] 	Characters a to z
+ *  [0-9] 	Numbers 0 to 9
+ *  \w 	Any Alphanumeric character
+ *  \W 	Any Non-alphanumeric character
  * */
 public class Lesson05Test {
 

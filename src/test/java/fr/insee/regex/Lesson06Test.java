@@ -8,7 +8,9 @@ import java.util.regex.Pattern;
 import org.junit.Test;
 
 /**
- * Catching some zzz's 
+ * Catching some zzz's
+ * {m} 	m Repetitions
+ * {m,n} 	m to n Repetitions
  * */
 public class Lesson06Test {
 

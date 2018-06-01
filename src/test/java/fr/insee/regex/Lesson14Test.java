@@ -8,7 +8,8 @@ import java.util.regex.Pattern;
 import org.junit.Test;
 
 /**
- * It's all conditional 
+ * It's all conditional
+ * (abc|def) 	Matches abc or def
  * */
 public class Lesson14Test {
 	

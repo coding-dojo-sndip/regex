@@ -9,7 +9,8 @@ import java.util.regex.Pattern;
 import org.junit.Test;
 
 /**
- * More group work 
+ * More group work
+ * (.*) 	Capture all
  * */
 public class Lesson13Test {
 	

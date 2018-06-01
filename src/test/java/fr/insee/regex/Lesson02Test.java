@@ -9,6 +9,8 @@ import org.junit.Test;
 
 /**
  * The Dot
+ *  . 	Any Character
+ * \. 	Period
  * */
 public class Lesson02Test {
 

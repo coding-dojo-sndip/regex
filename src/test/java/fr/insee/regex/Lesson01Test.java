@@ -9,6 +9,9 @@ import org.junit.Test;
 
 /**
  * The 123s
+ * 123… 	Digits
+ * \d 	Any Digit
+ * \D 	Any Non-digit character
  * */
 public class Lesson01Test {
 

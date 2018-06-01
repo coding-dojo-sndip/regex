@@ -9,6 +9,7 @@ import org.junit.Test;
 
 /**
  * Starting and ending
+ * ^…$ 	Starts and ends
  * */
 public class Lesson10Test {
 

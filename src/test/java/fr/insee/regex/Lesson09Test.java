@@ -8,7 +8,9 @@ import java.util.regex.Pattern;
 import org.junit.Test;
 
 /**
- * All this whitespace  
+ * All this whitespace
+ * \s 	Any Whitespace
+ * \S 	Any Non-whitespace character
  * */
 public class Lesson09Test {
 

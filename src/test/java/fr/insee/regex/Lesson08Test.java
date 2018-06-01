@@ -8,7 +8,8 @@ import java.util.regex.Pattern;
 import org.junit.Test;
 
 /**
- * Characters optional 
+ * Characters optional
+ * ? 	Optional character
  * */
 public class Lesson08Test {
 

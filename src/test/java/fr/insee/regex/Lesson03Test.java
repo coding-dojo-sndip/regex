@@ -8,7 +8,8 @@ import java.util.regex.Pattern;
 import org.junit.Test;
 
 /**
- * Matching specific characters 
+ * Matching specific characters
+ * [abc] 	Only a, b, or c
  * */
 public class Lesson03Test {
 

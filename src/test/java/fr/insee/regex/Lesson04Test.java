@@ -9,6 +9,7 @@ import org.junit.Test;
 
 /**
  * Excluding specific characters
+ * [^abc] 	Not a, b, nor c
  * */
 public class Lesson04Test {
 

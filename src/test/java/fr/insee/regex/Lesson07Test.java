@@ -9,6 +9,8 @@ import org.junit.Test;
 
 /**
  * Kleene Star (*) and the Kleene Plus (+)
+ * * 	Zero or more repetitions
+ * + 	One or more repetitions
  * */
 public class Lesson07Test {
 
