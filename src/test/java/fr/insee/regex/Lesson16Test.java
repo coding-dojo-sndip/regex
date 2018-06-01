@@ -16,9 +16,10 @@ import org.junit.Test;
 /**
  * Filtrer les lignes du fichier regex.log :
  * - Conserver uniquement les lignes dont le message contient au moins un caractère alphanumérique
+ * - Conserver uniquement les lignes dont le niveau est TRACE ou DEBUG
  * - Capturer le nombre en début de ligne
  * */
-public class Lesson15Test {
+public class Lesson16Test {
 
 	private static final String regex = ""; // TODO
 	
@@ -31,7 +32,7 @@ public class Lesson15Test {
 			.filter(this::matches)
 			.collect(Collectors.toList());
 		lines.forEach(System.out::println);
-		assertThat(lines).hasSize(25);
+		assertThat(lines).hasSize(9);
 	}
 	
 	@Test
@@ -39,9 +40,9 @@ public class Lesson15Test {
 		int sum = Files.readAllLines(Paths.get("src/test/resources/regex.log"))
 			.stream()
 			.filter(this::matches)
-			.mapToInt(this::mapToInt)
+			.mapToInt(this::extractInt)
 			.sum();
-		assertThat(sum).isEqualTo(450_574);
+		assertThat(sum).isEqualTo(123_167);
 	}
 	
 	private boolean matches(String line) {
@@ -49,7 +50,7 @@ public class Lesson15Test {
 		return matcher.matches();
 	}
 	
-	private int mapToInt(String line) {
+	private int extractInt(String line) {
 		Matcher matcher = pattern.matcher(line);
 		if(matcher.matches()) {
 			return Integer.valueOf(matcher.group(1));
