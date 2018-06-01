@@ -7,3 +7,4 @@ Pour chaque classe de tests, faire passer les tests unitaires au vert simplement
 ```java
 private static final String regex = ""; // TODO
 ```
+Tout sur les expressions régulières : [RegExr](https://regexr.com/)
